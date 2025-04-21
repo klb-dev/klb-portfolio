@@ -1,11 +1,11 @@
 :root {
-  --primary: #FFA500;     /* Orange */
-  --secondary: #A020F0FF;   /* Purple */
-  --accent: #0000FF;      /* Blue */
-  --background: #121212;  /* Dark background */
-  --light-bg: #1E1E1E;    /* Slightly lighter background */
-  --text: #FFFFFF;        /* White text */
-  --light-text: #AFAFAF;  /* Light gray text */
+  --primary: #e27602;     
+  --secondary: #A020F0;   
+  --accent: #1e90ff;      
+  --background: #121212;  
+  --light-bg: #1E1E1E;    
+  --text: #FFFFFF;        
+  --light-text: #AFAFAF;  
   
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -75,7 +75,7 @@ h2::after {
   position: absolute;
   bottom: -10px;
   left: 0;
-  width: 60%;
+  width: 75%;
   height: 4px;
   background: var(--primary);
   border-radius: 2px;
