@@ -4,32 +4,26 @@ import { FaGithub, FaLock } from "react-icons/fa";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [showAll, setShowAll] = useState(false);
 
   const projects = [
     {
       id: 1,
       title: "Forever Home",
-      category: "web",
+      category: ["web", "app"],
       image: "",
-      description:
-        "A modern e-commerce platform with React frontend and Node.js backend.",
-      technologies: [
-        "HTML",
-        "Style-components jsx",
-        "JavaScript",
-        "React",
-        "Node.js",
-      ],
+      description: "A modern e-commerce platform with React frontend and Node.js backend.",
+      technologies: ["HTML", "Style-components jsx", "JavaScript", "React", "Node.js", "Vite", "Epress", "Axios",],
       link: "#",
-      github: ""
+      github: "",
+      private: true
     },
     {
       id: 2,
       title: "Tons of Hearts",
       category: "game",
       image: "/src/assets/images/hearts-and-more-hearts.png",
-      description:
-        "Single level Match-3 game with real-time movement tracking. Made with Vanilla JS.",
+      description: "Single level Match-3 game with real-time movement tracking. Made with Vanilla JS.",
       technologies: ["HTML", "CSS", "JavaScript"],
       link: "https://klb-dev.github.io/hearts-and-more-hearts/",
       github: "https://github.com/klb-dev/hearts-and-more-hearts"
@@ -39,8 +33,7 @@ const Projects = () => {
       title: "Dream Getaways",
       category: "web",
       image: "",
-      description:
-        "Responsive travel blog with modern design and CMS integration.",
+      description: "Responsive travel blog with modern design and CMS integration.",
       technologies: ["Figma", "WordPress", "CSS", "JavaScript"],
       link: "#",
       github: ""
@@ -49,15 +42,9 @@ const Projects = () => {
       id: 4,
       title: "Infinity Chat",
       category: "app",
-      image: "../../assets/images/infinity-chat.png",
+      image: "/src/assets/images/infinity-chat.png",
       description: "A real-time, responsive direct messaging chat app built with React, Firebase, and styled-components. Supports email login, guest mode, emoji reactions, typing indicators, and dark/light mode — all deployed via Firebase Hosting.",
-      technologies: [
-        "Vite",
-        "React",
-        "Firebase",
-        "Styled-components",
-        "React Icons/Emojis"
-      ],
+      technologies: ["Vite", "React", "Firebase", "Styled-components", "React Icons/Emojis"],
       link: "https://infinity-chat-ed2a5.web.app",
       github: "https://github.com/klb-dev/infinity-chat-app"
     },
@@ -66,22 +53,61 @@ const Projects = () => {
       title: "Born to Ride, Pleasanton, TX",
       category: "web",
       image: "/src/assets/images/bornToRide.png",
-      description:
-        "Born to Ride - 501(c)(3)- landing page. Frontend uses Three.js to showcase skateboards and one skater. Donates can be submitted.",
-      technologies: [
-        "HTML 5",
-        "CSS3",
-        "JavaScript",
-        "Three.js",
-        "Firebase Firestore",
-        "Node.js",
-        "Express",
-        "CORS",
-        "Stripe SDK",
-      ],
+      description: "Born to Ride - 501(c)(3)- landing page. Frontend uses Three.js to showcase skateboards and one skater. Donates can be submitted.",
+      technologies: ["HTML 5", "CSS3", "JavaScript", "Three.js", "Firebase Firestore", "Node.js", "Express", "CORS", "Stripe SDK"],
       link: "https://borntoridepleasantontx.org",
       github: "",
       private: true
+    },
+    {
+      id: 6,
+      title: "Password Generator",
+      category: ["web", "app"],
+      image: "/src/assets/images/passwordGenerator.png",
+      description: "A sleek and secure browser extension that generates strong, customizable passwords instantly — with a stylish dark/light mode toggle and clean user interface.",
+      technologies: ["HTML 5", "CSS3", "JavaScript"],
+      link: "https://klb-dev.github.io/password-generator/",
+      github: "https://github.com/klb-dev/password-generator",
+    },
+    {
+      id: 7,
+      title: "Tech Skills Icon Burst",
+      category: "web",
+      image: "/src/assets/images/TechIconsBurst.png",
+      description: "A vibrant canvas animation showcasing an energetic burst of technology logos using HTML5 Canvas and JavaScript.",
+      technologies: ["HTML 5", "CSS3", "JavaScript"],
+      link: "https://techskillsiconburst.netlify.app/",
+      github: "https://github.com/klb-dev/techSkillsIconBurst",
+    },
+    {
+      id: 8,
+      title: "Glowing Buttons",
+      category: "web",
+      image: "/src/assets/images/glowingBtn.png",
+      description: "This project showcases stylish glowing buttons built purely with HTML and CSS. It’s lightweight, modern, and visually engaging — perfect for portfolios, call-to-action sections, or any site that needs a futuristic UI touch.",
+      technologies: ["HTML 5", "CSS3", "Google Fonts (Ubuntu)"],
+      link: "https://klb-dev.github.io/glowingButton/",
+      github: "https://github.com/klb-dev/glowingButton",
+    },
+    {
+      id: 9,
+      title: "Star Field Animation",
+      category: "web",
+      image: "/src/assets/images/Starfield.png",
+      description: "An interactive, colorful starfield animation built with HTML5 `<canvas>`, JavaScript, and CSS. This effect creates a 3D illusion of stars zooming past as you move your mouse — a sleek visual that can be used as a dynamic background or landing page effect.",
+      technologies: ["HTML 5", "CSS3", "JavaScript"],
+      link: "https://klb-dev.github.io/Starfield/",
+      github: "https://klb-dev.github.io/Starfield/",
+    },
+    {
+      id: 10,
+      title: "my To Do List",
+      category: ["web", "app"],
+      image: "/src/assets/images/toDoList.png",
+      description: "A sleek, animated to-do list app with dark/light theme support, localStorage persistence, and mobile-friendly interactions. Built with vanilla JavaScript, HTML, and CSS — no frameworks, just vibes.",
+      technologies: ["HTML 5", "CSS3", "JavaScript", "LocalStorage"],
+      link: "https://klb-dev.github.io/todoList/",
+      github: "https://github.com/klb-dev/todoList",
     },
   ];
 
@@ -95,7 +121,13 @@ const Projects = () => {
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter((project) => project.category === activeFilter);
+      : projects.filter((project) =>
+          Array.isArray(project.category)
+            ? project.category.includes(activeFilter)
+            : project.category === activeFilter
+        );
+
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
     <section id="projects" className="projects">
@@ -106,10 +138,11 @@ const Projects = () => {
           {filters.map((filter) => (
             <button
               key={filter.value}
-              className={`filter-btn ${
-                activeFilter === filter.value ? "active" : ""
-              }`}
-              onClick={() => setActiveFilter(filter.value)}
+              className={`filter-btn ${activeFilter === filter.value ? "active" : ""}`}
+              onClick={() => {
+                setActiveFilter(filter.value);
+                setShowAll(false); // reset view when filter changes
+              }}
             >
               {filter.label}
             </button>
@@ -117,25 +150,25 @@ const Projects = () => {
         </div>
 
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {visibleProjects.map((project) => (
             <div key={project.id} className="project-card">
-            {project.private ? (
-              <div className="github-badge locked" title="Private Repository">
-                <FaLock />
-              </div>
-            ) : (
-              project.github && (
-                <a
-                  href={project.github}
-                  className="github-badge"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View GitHub repository"
-                >
-                  <FaGithub />
-                </a>
-              )
-            )}
+              {project.private ? (
+                <div className="github-badge locked" title="Private Repository">
+                  <FaLock />
+                </div>
+              ) : (
+                project.github && (
+                  <a
+                    href={project.github}
+                    className="github-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View GitHub repository"
+                  >
+                    <FaGithub />
+                  </a>
+                )
+              )}
               <div className="project-image">
                 <img src={project.image} loading="lazy" alt={project.title} />
                 <div className="project-overlay">
@@ -158,11 +191,17 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        <div className="more-projects">
-          <a href="#" className="btn primary-btn">
-            View All Projects
-          </a>
-        </div>
+
+        {filteredProjects.length > 6 && (
+          <div className="more-projects">
+            <button
+              className="btn primary-btn"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? "Show Less" : "View All Projects"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
