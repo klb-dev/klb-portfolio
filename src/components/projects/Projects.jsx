@@ -12,9 +12,9 @@ const Projects = () => {
       title: "Forever Home",
       category: ["web", "app"],
       image: "",
-      description: "A modern e-commerce platform with React frontend and Node.js backend.",
-      technologies: ["HTML", "Style-components jsx", "JavaScript", "React", "Node.js", "Vite", "Epress", "Axios",],
-      link: "#",
+      description: "Forever Home is a sleek, modern web app that connects people with adoptable pets near them.",
+      technologies: ["React", "Style-components", "Vite", "Node.js", "Firebase Hosting", "Epress", "Axios", "Render"],
+      link: "https://forever-home-b1dba.web.app/",
       github: "",
       private: true
     },
@@ -101,7 +101,7 @@ const Projects = () => {
     },
     {
       id: 10,
-      title: "my To Do List",
+      title: "My To Do List",
       category: ["web", "app"],
       image: "/src/assets/images/toDoList.png",
       description: "A sleek, animated to-do list app with dark/light theme support, localStorage persistence, and mobile-friendly interactions. Built with vanilla JavaScript, HTML, and CSS — no frameworks, just vibes.",
