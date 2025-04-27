@@ -3,28 +3,30 @@ import './Skills.css';
 
 const Skills = () => {
   const frontendSkills = [
-    { name: 'HTML5', percentage: 95 },
-    { name: 'CSS3 / Bootstrap', percentage: 90 },
+    { name: 'HTML5', percentage: 98 },
+    { name: 'CSS3 / Bootstrap', percentage: 95 },
     { name: 'JavaScript', percentage: 92 },
-    { name: 'React.js', percentage: 88 },
-    { name: 'Vue.js', percentage: 82 },
-    { name: 'TypeScript', percentage: 85 }
+    { name: 'React.js', percentage: 90 },
+    { name: 'Vue.js', percentage: 76 },
+    { name: 'TypeScript', percentage: 70 }
   ];
   
   const backendSkills = [
-    { name: 'Node.js', percentage: 86 },
-    { name: 'Express.js', percentage: 85 },
-    { name: 'Python', percentage: 80 },
-    { name: 'MongoDB', percentage: 83 },
-    { name: 'PostgreSQL', percentage: 78 },
-    { name: 'AWS', percentage: 75 }
+    { name: 'Node.js', percentage: 98 },
+    { name: 'Express.js', percentage: 95 },
+    { name: 'Postman', percentage: 92},
+    { name: 'Docker', percentage: 80},
+    { name: 'Git', percentage: 98}
   ];
   
   const otherSkills = [
-    'Git & GitHub',
+    'Cybersecurity',
+    'Full-Stack Development',
+    'Web Development',
+    'Responsive Design',
+    'GitHub',
     'RESTful APIs',
     'GraphQL',
-    'Docker',
     'Figma',
     'Webpack',
     'Next.js',

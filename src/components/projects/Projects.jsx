@@ -32,7 +32,7 @@ const Projects = () => {
       id: 3,
       title: "Wanderlust Chronicles",
       category: "web",
-      image: "",
+      image: "/src/assets/images/WC-Screenshot .png",
       description: "Responsive travel blog with modern design and CMS integration.",
       technologies: ["React", "Vite", "CSS", "Unsplash"],
       link: "https://travel-log-b.netlify.app/",
