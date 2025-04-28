@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
 import  blueByrd  from '../../assets/images/blueByrdDevelopmentLogo.png'
+import { FaDownload } from 'react-icons/fa';
 
 const About = () => {
   const stats = [
@@ -46,7 +47,14 @@ const About = () => {
             
             <div className="about-buttons">
               <a href="#contact" className="btn primary-btn">Hire Me</a>
-              <a href="/src/assets/Karen Byrd Resume.pdf" className="btn secondary-btn" download={'Karen Byrd Resume'}>Resume</a>
+              <a 
+                href="/assets/resume/Karen Byrd Resume.pdf" 
+                className="btn secondary-btn" 
+                download="Karen Byrd Resume"
+              >
+                <FaDownload style={{marginRight: '8px', fontSize: '1.2rem'}} />
+                Resume
+              </a>
             </div>
           </div>
         </div>
