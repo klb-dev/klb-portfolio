@@ -1,6 +1,5 @@
 import React from 'react';
 import './About.css';
-import  blueByrd  from '../../assets/images/blueByrdDevelopmentLogo.png'
 import { FaDownload } from 'react-icons/fa';
 
 const About = () => {
@@ -17,7 +16,7 @@ const About = () => {
         
         <div className="about-content">
           <div className="about-image">
-            <img src={ blueByrd } loading="lazy" alt="About Me" className="about-img" />
+            <img src="/assets/images/blueByrdDevelopmentLogo.png" loading="lazy" alt="About Me" className="about-img" />
             <div className="experience-badge">
               <span className="years">2</span>
               <span className="text">Years of<br />Experience</span>

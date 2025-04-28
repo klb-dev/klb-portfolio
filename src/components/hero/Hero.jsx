@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css';
-import headshot from '../../assets/images/klbHeadShot.png'
 
 const Hero = () => {
     const textRef = useRef(null);
@@ -53,7 +52,7 @@ const Hero = () => {
           </div>
           <div className="hero-image">
             <div className="profile-img-container">
-              <img src={ headshot } alt="Karen Byrd" className="profile-img" />
+              <img src="/assets/images/klbHeadShot.png" alt="Karen Byrd" className="profile-img" />
               <div className="background-shape"></div>
             </div>
           </div>
