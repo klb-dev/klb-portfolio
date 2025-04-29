@@ -127,7 +127,7 @@ const Contact = () => {
 
             <div className="social-links">
               <a
-                href="https://github.com/klb-dev"
+                href="https://github.com/klb-dev?tab=repositories"
                 className="social-link"
                 target="_blank"
               >
