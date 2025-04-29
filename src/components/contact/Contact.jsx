@@ -1,110 +1,164 @@
-import React, { useState } from 'react';
-import './Contact.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faBluesky } from '@fortawesome/free-brands-svg-icons';
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faBluesky,
+} from "@fortawesome/free-brands-svg-icons";
+import "./Contact.css";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
-  
+
   const [formSubmitted, setFormSubmitted] = useState(false);
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the form data to a server
-    
-    // Show success message
-    setFormSubmitted(true);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
+
+    emailjs
+      .send(
+        "service_gi6dgvf",
+        "template_I6vpacc",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "tzmjfPE8fdRiFHJjG"
+      )
+      .then((result) => {
+        console.log("Email sent:", result.text);
+        toast.success("Message has been sent successfully!");
+        setFormSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setTimeout(() => setFormSubmitted(false), 5000);
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        toast.error("Something went wrong. Please try again.");
+      });
   };
-  
+
   const contactInfo = [
     {
       icon: <FontAwesomeIcon icon={faEnvelope} />,
-      title: 'Email',
-      value: 'klbdev88@gmail.com',
-      link: 'mailto:klbdev88@gmail.com'
+      title: "Email",
+      value: "klbdev88@gmail.com",
+      link: "mailto:klbdev88@gmail.com",
     },
     {
       icon: <FontAwesomeIcon icon={faPhone} />,
-      title: 'Phone',
-      value: '+1 (512)960-5108',
-      link: 'tel:+15129605108'
+      title: "Phone",
+      value: "+1 (512)960-5108",
+      link: "tel:+15129605108",
     },
     {
       icon: <FontAwesomeIcon icon={faMapMarkerAlt} />,
-      title: 'Location',
-      value: 'Pleasanton, TX, USA',
-      link: 'https://maps.google.com'
-    }
+      title: "Location",
+      value: "Pleasanton, TX, USA",
+      link: "https://maps.google.com",
+    },
   ];
 
   return (
     <section id="contact" className="contact">
+      <ToastContainer
+        position="bottom-center"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="container">
         <h2 className="section-title">Get In Touch</h2>
-        
+
         <div className="contact-grid">
           <div className="contact-info">
             <h3 className="info-title">Let's Talk</h3>
             <p className="info-description">
-             Reach out through the form and I'll get back to you as soon as possible.
+              Reach out through the form and I'll get back to you as soon as
+              possible.
             </p>
-            
+
             <div className="info-items">
               {contactInfo.map((item, index) => (
                 <div key={index} className="info-item">
                   <div className="info-icon">{item.icon}</div>
                   <div className="info-content">
                     <h4 className="info-item-title">{item.title}</h4>
-                    <a href={item.link} className="info-item-value">{item.value}</a>
+                    <a href={item.link} className="info-item-value">
+                      {item.value}
+                    </a>
                   </div>
                 </div>
               ))}
             </div>
-            
+
             <div className="social-links">
-              <a href="https://github.com/klb-dev" className="social-link" target="_blank">
+              <a
+                href="https://github.com/klb-dev"
+                className="social-link"
+                target="_blank"
+              >
                 <span className="sr-only">GitHub</span>
-                <div className="social-icon"><FontAwesomeIcon icon={faGithub} /></div>
+                <div className="social-icon">
+                  <FontAwesomeIcon icon={faGithub} />
+                </div>
               </a>
-              <a href="https://www.linkedin.com/in/karen-byrd-dev88/" className="social-link" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/karen-byrd-dev88/"
+                className="social-link"
+                target="_blank"
+              >
                 <span className="sr-only">LinkedIn</span>
-                <div className="social-icon"><FontAwesomeIcon icon={faLinkedin} /></div>
+                <div className="social-icon">
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </div>
               </a>
-              <a href="https://bsky.app/profile/klb88.bsky.social" className="social-link" target="_blank">
+              <a
+                href="https://bsky.app/profile/klb88.bsky.social"
+                className="social-link"
+                target="_blank"
+              >
                 <span className="sr-only">Bluesky</span>
-                <div className="social-icon"><FontAwesomeIcon icon={faBluesky} /></div>
+                <div className="social-icon">
+                  <FontAwesomeIcon icon={faBluesky} />
+                </div>
               </a>
             </div>
           </div>
-          
+
           <div className="contact-form-container">
             {formSubmitted ? (
               <div className="success-message">
@@ -140,7 +194,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="subject">Subject</label>
                   <input
@@ -153,7 +207,7 @@ const Contact = () => {
                     placeholder="Inquiry"
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="message">Message</label>
                   <textarea
@@ -166,8 +220,10 @@ const Contact = () => {
                     placeholder="Hello! I'm interested in working with you on..."
                   ></textarea>
                 </div>
-                
-                <button type="submit" className="submit-btn">Send Message</button>
+
+                <button type="submit" className="submit-btn">
+                  Send Message
+                </button>
               </form>
             )}
           </div>

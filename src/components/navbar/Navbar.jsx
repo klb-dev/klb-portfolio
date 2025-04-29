@@ -44,7 +44,7 @@ return (
             <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
                 <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}></span>
             </button>
-
+            {/* mobile menu and desktop menu */}
             <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
                 <ul className="mobile-nav-links">
                     <li><a href="#home" onClick={toggleMobileMenu}>Home</a></li>

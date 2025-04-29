@@ -2,6 +2,7 @@ import React from 'react';
 import './Skills.css';
 
 const Skills = () => {
+  // frontend skills plus degree in which I am competent
   const frontendSkills = [
     { name: 'HTML5', percentage: 98 },
     { name: 'CSS3 / Bootstrap', percentage: 95 },
@@ -10,7 +11,7 @@ const Skills = () => {
     { name: 'Vue.js', percentage: 76 },
     { name: 'TypeScript', percentage: 70 }
   ];
-  
+  // backend skills plus degree in which I am competent
   const backendSkills = [
     { name: 'Node.js', percentage: 98 },
     { name: 'Express.js', percentage: 95 },
@@ -19,6 +20,7 @@ const Skills = () => {
     { name: 'Git', percentage: 98}
   ];
   
+  // other skill tech and life
   const otherSkills = [
     'Cybersecurity',
     'Full-Stack Development',
@@ -31,7 +33,14 @@ const Skills = () => {
     'Webpack',
     'Next.js',
     'Firebase',
-    'UI/UX Design'
+    'UI/UX Design',
+    'Leadership',
+    'Teamwork',
+    'Problem Solving',
+    'Communication',
+    'Time Management',
+    'Adaptability',
+    'Critical Thinking',
   ];
 
   return (

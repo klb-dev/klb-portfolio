@@ -143,6 +143,7 @@
     border-width: 0;
   }
   
+  /* form */
   .contact-form-container {
     background-color: var(--background);
     border-radius: var(--border-radius);
@@ -267,3 +268,37 @@
       justify-content: center;
     }
   }
+
+
+   /* Toastify overrides */
+ .Toastify__toast {
+  border-radius: var(--border-radius);
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #ff4d4d, #ff9999);
+  color: white;
+}
+
+.Toastify__progress-bar {
+  background: var(--primary);
+}
+
+.Toastify__close-button {
+  color: white;
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+

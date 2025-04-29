@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Projects.css";
 import { FaGithub, FaLock } from "react-icons/fa";
 
@@ -6,6 +6,7 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [showAll, setShowAll] = useState(false);
 
+  // array of projects
   const projects = [
     {
       id: 1,

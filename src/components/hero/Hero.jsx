@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  // creates my typing effect
     const textRef = useRef(null);
-  
     useEffect(() => {
       const texts = ['Web-Developer', 'Game-Developer', 'App-Developer', 'UI/UX Designer'];
       let count = 0;

@@ -1,4 +1,3 @@
-import React from 'react';
 import './About.css';
 import { FaDownload } from 'react-icons/fa';
 
