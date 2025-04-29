@@ -212,10 +212,11 @@
   @media (max-width: 576px) {
     .hero {
       padding-top: 6rem;
+      height: 120vh;
     }
 
     .profession {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     .hero-description {
@@ -225,5 +226,9 @@
     .profile-img-container {
       width: 250px;
       height: 250px;
+    }
+
+    .scroll-indicator {
+      bottom: 20px;
     }
   }

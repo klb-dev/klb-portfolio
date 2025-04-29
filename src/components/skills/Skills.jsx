@@ -1,5 +1,5 @@
 import React from 'react';
-import './Skills.css';
+import './Skills.min.css';
 
 const Skills = () => {
   // frontend skills plus degree in which I am competent

@@ -1,4 +1,4 @@
-import './About.css';
+import './About.min.css';
 import { FaDownload } from 'react-icons/fa';
 
 const About = () => {

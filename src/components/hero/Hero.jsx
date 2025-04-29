@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import './Hero.css';
+import './Hero.min.css';
 
 const Hero = () => {
   // creates my typing effect
@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
           <div className="hero-image">
             <div className="profile-img-container">
-              <img src="/assets/images/klbHeadShot.png" alt="Karen Byrd" className="profile-img" />
+              <img src="/assets/images/klbHeadShot.png" alt="Karen Byrd" loading="lazy" className="profile-img" />
               <div className="background-shape"></div>
             </div>
           </div>

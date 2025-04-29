@@ -10,7 +10,7 @@ import {
   faLinkedin,
   faBluesky,
 } from "@fortawesome/free-brands-svg-icons";
-import "./Contact.css";
+import "./Contact.min.css";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
