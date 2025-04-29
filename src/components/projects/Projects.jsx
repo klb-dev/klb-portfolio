@@ -12,7 +12,7 @@ const Projects = () => {
       id: 1,
       title: "Forever Home",
       category: ["web", "app"],
-      image: "/assets/images/ForeverHome.png",
+      image: "/assets/images/ForeverHome.webp",
       description:
         "Forever Home is a sleek, modern web app that connects people with adoptable pets near them.",
       technologies: [
@@ -33,7 +33,7 @@ const Projects = () => {
       id: 2,
       title: "Tons of Hearts",
       category: "game",
-      image: "/assets/images/hearts-and-more-hearts.png",
+      image: "/assets/images/hearts-and-more-hearts.webp",
       description:
         "Single level Match-3 game with real-time movement tracking. Made with Vanilla JS.",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -44,7 +44,7 @@ const Projects = () => {
       id: 3,
       title: "Wanderlust Chronicles",
       category: "web",
-      image: "/assets/images/WC-Screenshot .png",
+      image: "/assets/images/WC-Screenshot.webp",
       description:
         "Responsive travel blog with modern design and CMS integration.",
       technologies: ["React", "Vite", "CSS", "Unsplash"],
@@ -55,7 +55,7 @@ const Projects = () => {
       id: 4,
       title: "Infinity Chat",
       category: "app",
-      image: "/assets/images/infinity-chat.png",
+      image: "/assets/images/infinity-chat.webp",
       description:
         "A real-time, responsive direct messaging chat app built with React, Firebase, and styled-components. Supports email login, guest mode, emoji reactions, typing indicators, and dark/light mode — all deployed via Firebase Hosting.",
       technologies: [
@@ -72,7 +72,7 @@ const Projects = () => {
       id: 5,
       title: "Born to Ride, Pleasanton, TX",
       category: "web",
-      image: "/assets/images/bornToRide.png",
+      image: "/assets/images/bornToRide.webp",
       description:
         "Born to Ride - 501(c)(3)- landing page. Frontend uses Three.js to showcase skateboards and one skater. Donates can be submitted.",
       technologies: [
@@ -94,7 +94,7 @@ const Projects = () => {
       id: 6,
       title: "Password Generator",
       category: ["web", "app"],
-      image: "/assets/images/passwordGenerator.png",
+      image: "/assets/images/passwordGenerator.webp",
       description:
         "A sleek and secure browser extension that generates strong, customizable passwords instantly — with a stylish dark/light mode toggle and clean user interface.",
       technologies: ["HTML 5", "CSS3", "JavaScript"],
@@ -105,7 +105,7 @@ const Projects = () => {
       id: 7,
       title: "My To Do List",
       category: ["web", "app"],
-      image: "/assets/images/toDoList.png",
+      image: "/assets/images/toDoList.webp",
       description:
         "A sleek, animated to-do list app with dark/light theme support, localStorage persistence, and mobile-friendly interactions. Built with vanilla JavaScript, HTML, and CSS — no frameworks, just vibes.",
       technologies: ["HTML 5", "CSS3", "JavaScript", "LocalStorage"],
@@ -116,7 +116,7 @@ const Projects = () => {
       id: 8,
       title: "Tech Skills Icon Burst",
       category: "web",
-      image: "/assets/images/TechIconsBurst.png",
+      image: "/assets/images/TechIconsBurst.webp",
       description:
         "A vibrant canvas animation showcasing an energetic burst of technology logos using HTML5 Canvas and JavaScript.",
       technologies: ["HTML 5", "CSS3", "JavaScript"],
@@ -127,7 +127,7 @@ const Projects = () => {
       id: 9,
       title: "Glowing Buttons",
       category: "web",
-      image: "/assets/images/glowingBtn.png",
+      image: "/assets/images/glowingBtn.webp",
       description:
         "This project showcases stylish glowing buttons built purely with HTML and CSS. It’s lightweight, modern, and visually engaging — perfect for portfolios, call-to-action sections, or any site that needs a futuristic UI touch.",
       technologies: ["HTML 5", "CSS3", "Google Fonts (Ubuntu)"],
@@ -138,7 +138,7 @@ const Projects = () => {
       id: 10,
       title: "Star Field Animation",
       category: "web",
-      image: "/assets/images/Starfield.png",
+      image: "/assets/images/Starfield.webp",
       description:
         "An interactive, colorful starfield animation built with HTML5 `<canvas>`, JavaScript, and CSS. This effect creates a 3D illusion of stars zooming past as you move your mouse — a sleek visual that can be used as a dynamic background or landing page effect.",
       technologies: ["HTML 5", "CSS3", "JavaScript"],
