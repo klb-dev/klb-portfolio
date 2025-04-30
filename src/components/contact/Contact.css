@@ -1,5 +1,19 @@
+.section-title {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary);
+    position: relative;
+}
+
 .contact {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-xs) 0;
     background-color: var(--light-bg);
     position: relative;
     overflow: hidden;
