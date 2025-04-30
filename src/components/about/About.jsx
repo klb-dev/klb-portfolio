@@ -23,7 +23,7 @@ const About = () => {
           </div>
           
           <div className="about-text">
-            <h3 className="about-greeting">Hello, I'm Karen owner of Blue Byrd Developments</h3>
+            <h3 className="about-greeting">I'm the owner of Blue Byrd Development</h3>
             <h4 className="about-title">A passionate Web Developer based in Texas</h4>
             
             <p className="about-description">

@@ -44,7 +44,7 @@ const Projects = () => {
       id: 3,
       title: "Wanderlust Chronicles",
       category: "web",
-      image: "/assets/images/WC-Screenshot.webp",
+      image: "/assets/images/wc-travel-blog.webp",
       description:
         "Responsive travel blog with modern design and CMS integration.",
       technologies: ["React", "Vite", "CSS", "Unsplash"],

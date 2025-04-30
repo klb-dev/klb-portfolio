@@ -39,7 +39,7 @@ const Contact = () => {
     emailjs
       .send(
         "service_gi6dgvf",
-        "template_I6vpacc",
+        "template_fazlclo",
         {
           from_name: formData.name,
           from_email: formData.email,
