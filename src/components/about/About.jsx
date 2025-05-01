@@ -46,7 +46,7 @@ const About = () => {
             <div className="about-buttons">
               <a href="#contact" className="btn primary-btn">Hire Me</a>
               <a 
-                href="/assets/resume/Karen Byrd Resume.pdf" 
+                href="/assets/resume/Karen-Byrd-PDF.pdf" 
                 className="btn secondary-btn" 
                 download="Karen Byrd Resume"
               >
