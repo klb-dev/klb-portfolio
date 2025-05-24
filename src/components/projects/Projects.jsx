@@ -8,68 +8,34 @@ const Projects = () => {
 
   // array of projects
   const projects = [
-    {
+       {
       id: 1,
-      title: "Forever Home",
+      title: "Blue Byrd Development",
       category: ["web", "app"],
-      image: "/assets/images/ForeverHome.webp",
+      image: "/assets/images/BBD-screenshot.webp",
       description:
-        "Forever Home is a sleek, modern web app that connects people with adoptable pets near them.",
+        "Blue Byrd Development is a sleek, responsive landing page built to represent a freelance web development brand. Designed with a clean, modern aesthetic and smooth animations, the site highlights core services, featured projects, testimonials, and a contact form—all structured for high conversion and great user experience across devices.",
       technologies: [
         "React",
-        "Style-components",
+        "TypeScript",
         "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
         "Node.js",
-        "Firebase Hosting",
+        "CORS",
+        "Firebase Authentication",
+        "Firebase Firestore",
         "Epress",
         "Axios",
-        "Render",
+        "Vercel Hosting",
+        "Railway Backend",
+        "Admin Custom Dashboard",
       ],
-      link: "https://forever-home-b1dba.web.app/",
-      github: "",
-      private: true,
+      link: "https://bluebyrddevelopment.com",
+      github: "https://github.com/klb-dev/bbd-landing-client",
     },
-    {
+        {
       id: 2,
-      title: "Tons of Hearts",
-      category: "game",
-      image: "/assets/images/hearts-and-more-hearts.webp",
-      description:
-        "Single level Match-3 game with real-time movement tracking. Made with Vanilla JS.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      link: "https://klb-dev.github.io/hearts-and-more-hearts/",
-      github: "https://github.com/klb-dev/hearts-and-more-hearts",
-    },
-    {
-      id: 3,
-      title: "Wanderlust Chronicles",
-      category: "web",
-      image: "/assets/images/wc-travel-blog.webp",
-      description:
-        "Responsive travel blog with modern design and CMS integration.",
-      technologies: ["React", "Vite", "CSS", "Unsplash"],
-      link: "https://travel-log-b.netlify.app/",
-      github: "https://github.com/klb-dev/travel-log-blog",
-    },
-    {
-      id: 4,
-      title: "Infinity Chat",
-      category: "app",
-      image: "/assets/images/infinity-chat.webp",
-      description:
-        "A real-time, responsive direct messaging chat app built with React, Firebase, and styled-components. Supports email login, guest mode, emoji reactions, typing indicators, and dark/light mode — all deployed via Firebase Hosting.",
-      technologies: [
-        "Vite",
-        "React",
-        "Firebase",
-        "Styled-components",
-        "React Icons/Emojis",
-      ],
-      link: "https://infinity-chat-ed2a5.web.app",
-      github: "https://github.com/klb-dev/infinity-chat-app",
-    },
-    {
-      id: 5,
       title: "Born to Ride, Pleasanton, TX",
       category: "web",
       image: "/assets/images/bornToRide.webp",
@@ -91,7 +57,67 @@ const Projects = () => {
       private: true,
     },
     {
+      id: 3,
+      title: "Forever Home",
+      category: ["web", "app"],
+      image: "/assets/images/ForeverHome.webp",
+      description:
+        "Forever Home is a sleek, modern web app that connects people with adoptable pets near them.",
+      technologies: [
+        "React",
+        "Style-components",
+        "Vite",
+        "Node.js",
+        "Firebase Hosting",
+        "Epress",
+        "Axios",
+        "Render",
+      ],
+      link: "https://forever-home-b1dba.web.app/",
+      github: "",
+      private: true,
+    },
+    {
+      id: 4,
+      title: "Tons of Hearts",
+      category: "game",
+      image: "/assets/images/hearts-and-more-hearts.webp",
+      description:
+        "Single level Match-3 game with real-time movement tracking. Made with Vanilla JS.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      link: "https://klb-dev.github.io/hearts-and-more-hearts/",
+      github: "https://github.com/klb-dev/hearts-and-more-hearts",
+    },
+    {
+      id: 5,
+      title: "Wanderlust Chronicles",
+      category: "web",
+      image: "/assets/images/wc-travel-blog.webp",
+      description:
+        "Responsive travel blog with modern design and CMS integration.",
+      technologies: ["React", "Vite", "CSS", "Unsplash"],
+      link: "https://travel-log-b.netlify.app/",
+      github: "https://github.com/klb-dev/travel-log-blog",
+    },
+    {
       id: 6,
+      title: "Infinity Chat",
+      category: "app",
+      image: "/assets/images/infinity-chat.webp",
+      description:
+        "A real-time, responsive direct messaging chat app built with React, Firebase, and styled-components. Supports email login, guest mode, emoji reactions, typing indicators, and dark/light mode — all deployed via Firebase Hosting.",
+      technologies: [
+        "Vite",
+        "React",
+        "Firebase",
+        "Styled-components",
+        "React Icons/Emojis",
+      ],
+      link: "https://infinity-chat-ed2a5.web.app",
+      github: "https://github.com/klb-dev/infinity-chat-app",
+    },
+    {
+      id: 7,
       title: "Password Generator",
       category: ["web", "app"],
       image: "/assets/images/passwordGenerator.webp",
@@ -102,7 +128,7 @@ const Projects = () => {
       github: "https://github.com/klb-dev/password-generator",
     },
     {
-      id: 7,
+      id: 8,
       title: "My To Do List",
       category: ["web", "app"],
       image: "/assets/images/toDoList.webp",
@@ -113,7 +139,7 @@ const Projects = () => {
       github: "https://github.com/klb-dev/todoList",
     },
     {
-      id: 8,
+      id: 9,
       title: "Tech Skills Icon Burst",
       category: "web",
       image: "/assets/images/TechIconsBurst.webp",
@@ -124,7 +150,7 @@ const Projects = () => {
       github: "https://github.com/klb-dev/techSkillsIconBurst",
     },
     {
-      id: 9,
+      id: 10,
       title: "Glowing Buttons",
       category: "web",
       image: "/assets/images/glowingBtn.webp",
@@ -135,7 +161,7 @@ const Projects = () => {
       github: "https://github.com/klb-dev/glowingButton",
     },
     {
-      id: 10,
+      id: 11,
       title: "Star Field Animation",
       category: "web",
       image: "/assets/images/Starfield.webp",
