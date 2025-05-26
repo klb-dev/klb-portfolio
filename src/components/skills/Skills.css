@@ -116,13 +116,14 @@
 @media (max-width: 768px) {
   .skills-icon-container {
     width: 98%;
+    padding: var(--spacing-sm);
   }
 
   .floating-icons {
-    height: 380px;
+    height: 650px;
   }
   .floating-tags {
-    height: 380px;
+    height: 480px;
   }
 
   .floating-icon {
@@ -165,7 +166,7 @@
 @media (max-width: 480px) {
   .floating-icons,
   .floating-tags {
-    height: 450px; 
+    height: 550px; 
   }
   
   .floating-tag {
