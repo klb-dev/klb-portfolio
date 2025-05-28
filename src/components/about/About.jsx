@@ -1,5 +1,8 @@
 import './About.min.css';
-import { FaDownload } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const About = () => {
   const stats = [
@@ -56,7 +59,7 @@ const About = () => {
                 aria-label="Download Karen Byrd's resume as PDF"
                 type="application/pdf"
               >
-                <FaDownload style={{marginRight: '8px', fontSize: '1.2rem'}} />
+                <FontAwesomeIcon icon={faDownload} style={{marginRight: '8px', fontSize: '1.2rem'}} />
                 Resume
               </a>
             </div>
