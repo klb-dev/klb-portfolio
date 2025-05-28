@@ -103,6 +103,10 @@ const getRandomMotionClass = () =>
   motionClasses[Math.floor(Math.random() * motionClasses.length)];
 
 const Skills = () => {
+  useEffect(() => {
+    import('./Skills.min.css');
+  }, []);
+
   const containerRef = useRef(null);
   const [containerWidth, setContainerWidth] = useState(800);
   

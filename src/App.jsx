@@ -1,11 +1,11 @@
 import {lazy, Suspense} from 'react';
-import Navbar from './components/navbar/Navbar';
-import Hero from './components/hero/Hero';
+const Navbar = lazy(() => import('./components/navbar/Navbar'));
+const Hero = lazy(() => import('./components/hero/Hero'));
 const About = lazy(() => import('./components/about/About'))
-import Projects from './components/projects/Projects';
-import Skills from './components/skills/Skills';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
+const Projects = lazy(() => import('./components/projects/Projects'));
+const Skills = lazy(() => import('./components/skills/Skills'));
+const Contact = lazy(() => import('./components/contact/Contact'));
+const Footer = lazy(() => import('./components/footer/Footer'));
 
 
 function App() {

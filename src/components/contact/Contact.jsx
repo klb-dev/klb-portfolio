@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -15,11 +15,16 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
 
 const Contact = () => {
+  useEffect(() => {
+    import('./Contact.min.css')
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

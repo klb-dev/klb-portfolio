@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './About.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -5,6 +6,10 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 
 const About = () => {
+  useEffect(() => {
+    import('./About.min.css');
+  }, []);
+
   const stats = [
     { value: '2', label: 'Years Experience' },
     { value: '6+', label: 'Projects Completed' },

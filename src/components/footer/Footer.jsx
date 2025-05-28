@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import "./Footer.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
+  useEffect(() => {
+    import('./Footer.min.css');
+  }, []);
+  
   return (
     <footer className="footer">
       <div className="footer-container">
