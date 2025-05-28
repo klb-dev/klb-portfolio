@@ -1,5 +1,4 @@
 import {lazy, Suspense} from 'react';
-import './index.min.css';
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';
 const About = lazy(() => import('./components/about/About'))
