@@ -1,36 +1,48 @@
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaVuejs,
-  FaNodeJs,
-  FaGithub,
-  FaFigma,
-  FaDocker
-} from 'react-icons/fa';
-import {
-  SiTypescript,
-  SiNextdotjs,
-  SiWebpack,
-  SiFirebase,
-  SiExpress,
-  SiPostman,
-  SiGraphql
-} from 'react-icons/si';
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faReact,
+  faVuejs,
+  faNodeJs,
+  faGithub,
+  faFigma,
+  faDocker
+} from '@fortawesome/free-brands-svg-icons';
+import { faServer, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Skills.min.css';
 import { useEffect, useRef, useState } from 'react';
+import typeScript from '/assets/images/typescript.svg';
+import firebase from '/assests/images/firebase.svg';
+import webpack from '/assets/images/webpack.svg';
+import postman from '/assets/images/postman.svg';
+import nextJs from '/assets/images/nextjs.svg';
 
 const techSkills = [
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaVuejs, SiTypescript,
-  FaNodeJs, SiExpress, SiPostman, FaDocker, FaGithub, SiNextdotjs, SiWebpack, SiFirebase, SiGraphql
+  { icon: faHtml5, label: "HTML5" },
+  { icon: faCss3Alt, label: "CSS3" },
+  { icon: faJs, label: "JavaScript" },
+  { icon: faReact, label: "React" },
+  { icon: faVuejs, label: "Vue.js" },
+  { icon: faNodeJs, label: "Node.js" },
+  { icon: faServer, label: "Express (generic)" },
+  { icon: faDocker, label: "Docker" },
+  { icon: faGithub, label: "GitHub" },
+  { icon: faFigma, label: "Figma" },
+  { icon: faProjectDiagram, label: "GraphQL" },
+  { icon: typeScript, label: "TypeScript", isImage: true },
+  { icon: nextJs, label: "Next.js", isImage: true },
+  { icon: webpack, label: "Webpack", isImage: true },
+  { icon: firebase, label: "Firebase", isImage: true },
+  { icon: postman, label: "Postman", isImage: true }
 ];
 
 const otherSkills = [
   'Cybersecurity', 'Web Development', 'Responsive Design', 'GitHub', 'Figma',
   'UI/UX Design', 'Leadership', 'Teamwork', 'Problem Solving', 'Communication',
   'Time Management', 'Adaptability', 'Critical Thinking'
-]
+];
 
 const getSeededMotionStyle = (index, total, isTag, containerWidth, containerHeight) => {
  let columns;
@@ -118,13 +130,18 @@ const Skills = () => {
         <div className="skills-icon-container" ref={containerRef}>
           <h3 className="skills-category">Tech Stack</h3>
           <div className="floating-icons" style={{ height: `${iconHeight}px` }}>
-            {techSkills.map((Icon, i) => (
+            {techSkills.map(({icon, label, isImage}, i )=> (
               <div
                 key={i}
                 className={`floating-icon ${getRandomMotionClass()}`}
                 style={getSeededMotionStyle(i, techSkills.length, false, containerWidth, iconHeight)} 
+                title={label}
               >
-                <Icon size={30} />
+                {isImage ? (
+                  <img src={icon} alt={label} width={30} height={30} />
+                ) : (
+                  <FontAwesomeIcon icon={icon} size="2x" />
+                )}
               </div>
             ))}
           </div>
