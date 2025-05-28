@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Skills.min.css';
 import { useEffect, useRef, useState } from 'react';
 import typeScript from '/assets/images/typescript.svg';
-import firebase from '/assests/images/firebase.svg';
+import firebase from '/assets/images/firebase.svg';
 import webpack from '/assets/images/webpack.svg';
 import postman from '/assets/images/postman.svg';
 import nextJs from '/assets/images/nextjs.svg';
