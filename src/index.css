@@ -113,6 +113,7 @@ button:hover, .btn:hover {
 
 img {
   max-width: 100%;
+  height: auto;
   border-radius: var(--border-radius);
 }
 
@@ -140,6 +141,14 @@ img {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {

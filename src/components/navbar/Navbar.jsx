@@ -85,7 +85,7 @@ const Navbar = () => {
 return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-container">
-            <a href="#home" className="logo" aria-label="Back to top — Karen Byrd Portfolio homepage">
+            <a href="https://bluebyrddevelopment.com" className="logo" aria-label="Back to top — Karen Byrd Portfolio homepage">
             <span className="logo-text">Karen Byrd Portfolio</span>
             </a>
             <div className="desktop-menu" aria-label="Main navigation">

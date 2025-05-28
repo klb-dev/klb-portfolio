@@ -239,7 +239,11 @@ const Projects = () => {
                 )
               )}
               <div className="project-image">
-                <img src={project.image} loading="lazy" alt={project.title} />
+                <img 
+                  src={project.image} loading="lazy" 
+                  alt={project.title}
+                  width='350'
+                  height='200' />
                 <div className="project-overlay">
                 <a
                   href={project.link}

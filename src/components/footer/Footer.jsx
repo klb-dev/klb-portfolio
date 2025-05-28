@@ -7,14 +7,24 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <img
-            src="/assets/images/blueByrdDevelopmentLogo.webp"
-            loading="lazy"
-            alt="Blue Byrd Developments Logo"
-            className="footer-logo"
-          />
+          <a
+            href="https://bluebyrddevelopment.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+            aria-label="Visit Blue Byrd Development"
+          >
+            <img
+              src="/assets/images/blueByrdDevelopmentLogo.webp"
+              loading="lazy"
+              alt="Blue Byrd Developments Logo"
+              className="footer-logo"
+              width='75'
+              height='75'
+            />
+          </a>
           <span className="footer-text">
-            © {new Date().getFullYear()}, Developed by Blue Byrd Developments
+              © {new Date().getFullYear()}, Developed by Blue Byrd Developments
           </span>
         </div>
         <div className="footer-right">
