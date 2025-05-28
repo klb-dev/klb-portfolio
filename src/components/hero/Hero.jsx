@@ -57,7 +57,7 @@ const Hero = () => {
                 alt="Karen Byrd" className="profile-img"
                 width="300"
                 height="300" 
-                loading="lazy"
+                decoding="async"
                 />
               <div className="background-shape"></div>
             </div>
