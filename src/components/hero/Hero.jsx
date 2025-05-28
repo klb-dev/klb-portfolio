@@ -39,7 +39,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1>Hello! I'm <span className="highlight">Karen Byrd </span></h1>
-            <h2 className="profession">
+            <h2 className="profession" aria-label="I'm a web developer, game developer, app developer, and UI/UX designer">
               I'm a <span ref={textRef} className="typed-text"></span>
             </h2>
             <p className="hero-description">

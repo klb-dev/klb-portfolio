@@ -15,6 +15,10 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -38,15 +42,15 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_gi6dgvf",
-        "template_fazlclo",
+        SERVICE_ID,
+        TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
         },
-        "tzmjfPE8fdRiFHJjG"
+        USER_ID
       )
       .then((result) => {
         console.log("Email sent:", result.text);
@@ -129,8 +133,7 @@ const Contact = () => {
               <a
                 href="https://github.com/klb-dev?tab=repositories"
                 className="social-link"
-                target="_blank"
-              >
+                target="_blank" rel="noopener noreferrer">
                 <span className="sr-only">GitHub</span>
                 <div className="social-icon">
                   <FontAwesomeIcon icon={faGithub} />
@@ -139,7 +142,7 @@ const Contact = () => {
               <a
                 href="https://www.linkedin.com/in/karen-byrd-dev88/"
                 className="social-link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <span className="sr-only">LinkedIn</span>
                 <div className="social-icon">
@@ -149,7 +152,7 @@ const Contact = () => {
               <a
                 href="https://bsky.app/profile/klb88.bsky.social"
                 className="social-link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <span className="sr-only">Bluesky</span>
                 <div className="social-icon">

@@ -15,7 +15,7 @@ const About = () => {
         
         <div className="about-content">
           <div className="about-image">
-            <img src="/assets/images/blueByrdDevelopmentLogo.webp" loading="lazy" alt="About Me" className="about-img" />
+            <img src="/assets/images/blueByrdDevelopmentLogo.webp" loading="lazy" alt="Karen Byrd Blue Byrd Development Logo" className="about-img" />
             <div className="experience-badge">
               <span className="years">2</span>
               <span className="text">Years of<br />Experience</span>

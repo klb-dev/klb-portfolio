@@ -197,7 +197,6 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="container">
         <h2 className="section-title">My Projects</h2>
-
         <div className="filter-container">
           {filters.map((filter) => (
             <button
@@ -217,7 +216,7 @@ const Projects = () => {
 
         <div className="projects-grid">
           {visibleProjects.map((project) => (
-            <div key={project.id} className="project-card">
+            <div key={project.id} className="project-card" role="group" aria-label={project.title}>
               {project.private ? (
                 <div className="github-badge locked" title="Private Repository">
                   <FaLock />
