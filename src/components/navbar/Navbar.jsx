@@ -4,7 +4,25 @@ import './Navbar.min.css';
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsmobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("");
     const menuRef = useRef(null);
+
+     useEffect(() => {
+        const sections = document.querySelectorAll("section[id]");
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setActiveSection(entry.target.id);
+            }
+            });
+        },
+        { threshold: 0.6 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+        return () => observer.disconnect();
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,6 +72,7 @@ const Navbar = () => {
         }
     };
 
+    
     document.addEventListener('keydown', trapFocus);
     return () => document.removeEventListener('keydown', trapFocus);
     }, [isMobileMenuOpen]);
@@ -66,11 +85,10 @@ const Navbar = () => {
 return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-container">
-            <a href="#" className="logo">
-               <span className="logo-text">Karen Byrd Portfolio</span>   
+            <a href="#home" className="logo" aria-label="Back to top — Karen Byrd Portfolio homepage">
+            <span className="logo-text">Karen Byrd Portfolio</span>
             </a>
-
-            <div className="desktop-menu">
+            <div className="desktop-menu" aria-label="Main navigation">
                 <ul className="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -95,12 +113,18 @@ return (
             ref={menuRef}
             className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}
             >
-                <ul className="mobile-nav-links">
-                    <li><a href="#home" onClick={toggleMobileMenu}>Home</a></li>
-                    <li><a href="#about" onClick={toggleMobileMenu}>About</a></li>
-                    <li><a href="#projects" onClick={toggleMobileMenu}>Projects</a></li>
-                    <li><a href="#skills" onClick={toggleMobileMenu}>Skills</a></li>
-                    <li><a href="#contact" onClick={toggleMobileMenu}>Contact</a></li>
+            <ul className="mobile-nav-links">
+                {["home", "about", "projects", "skills", "contact"].map((id) => (
+                <li key={id}>
+                    <a
+                    href={`#${id}`}
+                    onClick={toggleMobileMenu}
+                    aria-current={activeSection === id ? "page" : undefined}
+                    >
+                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                    </a>
+                </li>
+                ))}
                 </ul>
             </div>
         </div>

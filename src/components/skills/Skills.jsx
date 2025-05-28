@@ -115,7 +115,6 @@ const Skills = () => {
     <section id="skills" className="skills">
       <div className="container">
         <h2 className="section-title">My Skills</h2>
-
         <div className="skills-icon-container" ref={containerRef}>
           <h3 className="skills-category">Tech Stack</h3>
           <div className="floating-icons" style={{ height: `${iconHeight}px` }}>
@@ -130,7 +129,6 @@ const Skills = () => {
             ))}
           </div>
         </div>
-
         <div className="skills-icon-container">
           <h3 className="skills-category">Other Skills</h3>
         <div className="floating-tags" style={{ height: `${tagHeight}px` }}>
@@ -138,7 +136,7 @@ const Skills = () => {
             <div
               key={i}
               className={`floating-tag ${getRandomMotionClass()}`}
-              style={getSeededMotionStyle(i, otherSkills.length, true, containerWidth, tagHeight)} // ← FIXED
+              style={getSeededMotionStyle(i, otherSkills.length, true, containerWidth, tagHeight)} 
             >
               {skill}
             </div>

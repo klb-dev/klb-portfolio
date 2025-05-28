@@ -121,7 +121,13 @@ const Contact = () => {
                   <div className="info-icon">{item.icon}</div>
                   <div className="info-content">
                     <h4 className="info-item-title">{item.title}</h4>
-                    <a href={item.link} className="info-item-value">
+                    <a
+                      href={item.link}
+                      className="info-item-value"
+                      aria-label={`Visit ${item.label ?? 'external link'}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {item.value}
                     </a>
                   </div>
@@ -133,7 +139,10 @@ const Contact = () => {
               <a
                 href="https://github.com/klb-dev?tab=repositories"
                 className="social-link"
-                target="_blank" rel="noopener noreferrer">
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
                 <span className="sr-only">GitHub</span>
                 <div className="social-icon">
                   <FontAwesomeIcon icon={faGithub} />
@@ -142,7 +151,9 @@ const Contact = () => {
               <a
                 href="https://www.linkedin.com/in/karen-byrd-dev88/"
                 className="social-link"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <span className="sr-only">LinkedIn</span>
                 <div className="social-icon">
@@ -152,7 +163,9 @@ const Contact = () => {
               <a
                 href="https://bsky.app/profile/klb88.bsky.social"
                 className="social-link"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Bluesky"
               >
                 <span className="sr-only">Bluesky</span>
                 <div className="social-icon">
@@ -164,7 +177,7 @@ const Contact = () => {
 
           <div className="contact-form-container">
             {formSubmitted ? (
-              <div className="success-message">
+              <div className="success-message" aria-live="polite">
                 <div className="success-icon">✓</div>
                 <h3>Message Sent Successfully!</h3>
                 <p>Thank you for reaching out. I'll get back to you shortly.</p>
@@ -181,6 +194,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       placeholder="Jane Doe"
                     />
                   </div>
@@ -193,6 +207,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       placeholder="example@email.com"
                     />
                   </div>
@@ -207,6 +222,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     placeholder="Inquiry"
                   />
                 </div>
@@ -220,6 +236,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     placeholder="Hello! I'm interested in working with you on..."
                   ></textarea>
                 </div>

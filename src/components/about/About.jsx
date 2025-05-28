@@ -49,6 +49,8 @@ const About = () => {
                 href="/assets/resume/Karen-Byrd-PDF.pdf" 
                 className="btn secondary-btn" 
                 download="Karen Byrd Resume"
+                aria-label="Download Karen Byrd's resume as PDF"
+                type="application/pdf"
               >
                 <FaDownload style={{marginRight: '8px', fontSize: '1.2rem'}} />
                 Resume

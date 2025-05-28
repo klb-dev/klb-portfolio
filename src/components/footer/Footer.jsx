@@ -19,7 +19,11 @@ const Footer = () => {
         </div>
         <div className="footer-right">
           <span className="footer-text">All Rights Reserved.</span>
-          <a href="#home" className="footer-text footer-back-to-top">
+          <a
+            href="#home"
+            className="footer-text footer-back-to-top"
+            aria-label="Back to top"
+          >
             <FontAwesomeIcon icon={faArrowUp} />
           </a>
         </div>

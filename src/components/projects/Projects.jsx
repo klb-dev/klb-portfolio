@@ -218,7 +218,11 @@ const Projects = () => {
           {visibleProjects.map((project) => (
             <div key={project.id} className="project-card" role="group" aria-label={project.title}>
               {project.private ? (
-                <div className="github-badge locked" title="Private Repository">
+                <div
+                  className="github-badge locked"
+                  title="Private Repository"
+                  aria-label={`Private repository: ${project.title}`}
+                >
                   <FaLock />
                 </div>
               ) : (
@@ -237,11 +241,13 @@ const Projects = () => {
               <div className="project-image">
                 <img src={project.image} loading="lazy" alt={project.title} />
                 <div className="project-overlay">
-                  <a
-                    href={project.link}
-                    className="project-link"
-                    target="_blank"
-                  >
+                <a
+                  href={project.link}
+                  className="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View project: ${project.title}`}
+                >
                     View Project
                   </a>
                 </div>
@@ -266,6 +272,7 @@ const Projects = () => {
             <button
               className="btn primary-btn"
               onClick={() => setShowAll(!showAll)}
+              aria-label={showAll ? "Show fewer projects" : "Show all projects"}
             >
               {showAll ? "Show Less" : "View All Projects"}
             </button>
