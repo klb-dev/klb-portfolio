@@ -75,12 +75,10 @@ This portfolio was built using modern tools and best practices for performance, 
 ## 💡 Future Improvements
 - Add blog or CMS integration
 
-- Accessibility enhancements (ARIA, focus states)
-
 - Add unit tests (Jest/React Testing Library)
 
 ## 🧑‍🎨 Author
 **Karen Byrd** <br>
 [GitHub](https://github.com/klb-dev?tab=repositories) | [LinkedIn](https://www.linkedin.com/in/karen-byrd-dev88/) | [BlueSky](https://bsky.app/profile/klb88.bsky.social)
 
-![Blue Byrd Development Logo](/public/assets/images/blueByrdDevelopmentLogo.png)
+![Blue Byrd Development Logo](/public/assets/images/blueByrdDevelopmentLogo.webp)
