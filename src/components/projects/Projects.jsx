@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Projects.min.css";
-import { FaGithub, FaLock } from "react-icons/fa";
+import { faGithub, faLock } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -223,7 +225,7 @@ const Projects = () => {
                   title="Private Repository"
                   aria-label={`Private repository: ${project.title}`}
                 >
-                  <FaLock />
+                  <FontAwesomeIcon icon={faLock}  />
                 </div>
               ) : (
                 project.github && (
@@ -234,7 +236,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     aria-label="View GitHub repository"
                   >
-                    <FaGithub />
+                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 )
               )}
