@@ -45,9 +45,7 @@ const getSeededMotionStyle = (index, total, isTag, containerWidth, containerHeig
 
   let rows;
   if (isTag) {
-    const minRows = Math.ceil(total / columns);
-    const hasExtraSpace = containerHeight > (minRows * (itemHeight + 30));
-    rows = hasExtraSpace ? Math.min(minRows + 1, Math.ceil(containerHeight / (itemHeight + 20))) : minRows;
+    rows = Math.ceil(total / columns);
   } else {
     rows = Math.ceil(total / columns);
   }
@@ -67,8 +65,8 @@ const getSeededMotionStyle = (index, total, isTag, containerWidth, containerHeig
   const xCenter = col * cellWidth + cellWidth / 2;
   const yCenter = actualRow * cellHeight + cellHeight / 2;
 
-  const maxXOffset = isTag ? Math.min(cellWidth * 0.3, 15) : Math.min(cellWidth * 0.2, 10);
-  const maxYOffset = isTag ? Math.min(cellHeight * 0.3, 15) : Math.min(cellHeight * 0.2, 10);
+  const maxXOffset = isTag ? Math.min(cellWidth * 0.2, 10) : Math.min(cellWidth * 0.15, 8);
+  const maxYOffset = isTag ? Math.min(cellHeight * 0.2, 10) : Math.min(cellHeight * 0.15, 8);
 
   const xOffset = (Math.random() - 0.5) * maxXOffset * 2;
   const yOffset = (Math.random() - 0.5) * maxYOffset * 2;
@@ -95,19 +93,23 @@ const getRandomMotionClass = () =>
 const Skills = () => {
   const containerRef = useRef(null);
   const [containerWidth, setContainerWidth] = useState(800);
-  const [containerHeight, setContainerHeight] = useState(300);
   
   useEffect(() => {
     const updateWidth = () => {
       if (containerRef.current) {
         setContainerWidth(containerRef.current.offsetWidth);
-        setContainerHeight(containerRef.current.offsetHeight);
       }
     };
     updateWidth();
     window.addEventListener('resize', updateWidth);
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
+
+    const tagRows = Math.ceil(otherSkills.length / (containerWidth < 600 ? 2 : containerWidth < 900 ? 3 : 4));
+    const iconRows = Math.ceil(techSkills.length / (containerWidth < 600 ? 3 : containerWidth < 900 ? 4 : 5));
+
+    const tagHeight = tagRows * 80; 
+    const iconHeight = iconRows * 90; 
 
   return (
     <section id="skills" className="skills">
@@ -116,12 +118,12 @@ const Skills = () => {
 
         <div className="skills-icon-container" ref={containerRef}>
           <h3 className="skills-category">Tech Stack</h3>
-          <div className="floating-icons">
+          <div className="floating-icons" style={{ height: `${iconHeight}px` }}>
             {techSkills.map((Icon, i) => (
               <div
                 key={i}
                 className={`floating-icon ${getRandomMotionClass()}`}
-                style={getSeededMotionStyle(i, techSkills.length, false, containerWidth, containerHeight)}
+                style={getSeededMotionStyle(i, techSkills.length, false, containerWidth, iconHeight)} 
               >
                 <Icon size={30} />
               </div>
@@ -131,17 +133,17 @@ const Skills = () => {
 
         <div className="skills-icon-container">
           <h3 className="skills-category">Other Skills</h3>
-          <div className="floating-tags">
-            {otherSkills.map((skill, i) => (
-              <div
-                key={i}
-                className={`floating-tag ${getRandomMotionClass()}`}
-                style={getSeededMotionStyle(i, otherSkills.length, true, containerWidth, containerHeight)}
-              >
-                {skill}
-              </div>
-            ))}
-          </div>
+        <div className="floating-tags" style={{ height: `${tagHeight}px` }}>
+          {otherSkills.map((skill, i) => (
+            <div
+              key={i}
+              className={`floating-tag ${getRandomMotionClass()}`}
+              style={getSeededMotionStyle(i, otherSkills.length, true, containerWidth, tagHeight)} // ← FIXED
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
         </div>
       </div>
     </section>

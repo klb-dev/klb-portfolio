@@ -209,9 +209,15 @@
     }
   }
 
+  @media (max-height: 740px) {
+    .scroll-indicator {
+      display: none;
+    }
+  }
+
   @media (max-width: 576px) {
     .hero {
-      height: 130vh;
+      height: 120vh;
     }
 
     .profession {
