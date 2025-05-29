@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faServer, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Skills.min.css';
+import './Skills.css';
 import { useEffect, useRef, useState } from 'react';
 import typeScript from '/assets/images/typescript.svg';
 import firebase from '/assets/images/firebase.svg';

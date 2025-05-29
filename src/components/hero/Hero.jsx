@@ -37,6 +37,20 @@ const Hero = () => {
     return (
       <section id="home" className="hero">
         <div className="hero-content">
+                  <div className="hero-image">
+            <div className="profile-img-container">
+              <img 
+                src="/assets/images/klbHeadShot.webp" 
+                alt="Karen Byrd" 
+                className="profile-img"
+                width="300"
+                height="300" 
+                fetchPriority='high'
+                loading='eager'
+                />
+              <div className="background-shape"></div>
+            </div>
+          </div>
           <div className="hero-text">
             <h1>Hello! I'm <span className="highlight">Karen Byrd </span></h1>
             <h2 className="profession" aria-label="I'm a web developer, game developer, app developer, and UI/UX designer">
@@ -48,18 +62,6 @@ const Hero = () => {
             </p>
             <div className="hero-cta">
               <a href="#projects" className="btn primary-btn">View My Work</a>
-            </div>
-          </div>
-          <div className="hero-image">
-            <div className="profile-img-container">
-              <img 
-                src="/assets/images/klbHeadShot.webp" 
-                alt="Karen Byrd" className="profile-img"
-                width="300"
-                height="300" 
-                decoding="async"
-                />
-              <div className="background-shape"></div>
             </div>
           </div>
         </div>

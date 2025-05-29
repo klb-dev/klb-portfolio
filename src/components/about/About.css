@@ -37,38 +37,7 @@
   .about-img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border: 5px solid var(--light-bg);
-  }
-  
-  .experience-badge {
-    position: absolute;
-    bottom: 30px;
-    left: 18rem;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
-    padding: 20px;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .years {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1;
-  }
-  
-  .text {
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-top: 5px;
   }
   
   .about-text {
@@ -126,6 +95,7 @@
   
   .about-buttons {
     display: flex;
+    justify-content: center;
     gap: var(--spacing-sm);
   }
   
@@ -162,12 +132,6 @@
     .about-buttons {
       justify-content: center;
     }
-    
-    .experience-badge {
-      right: 50%;
-      transform: translateX(50%);
-      bottom: -60px;
-    }
   }
   
   @media (max-width: 576px) {
@@ -185,11 +149,5 @@
     
     .stat-label {
       font-size: 0.9rem;
-    }
-
-    .experience-badge {
-      left: 10%;
-      transform: translateX(50%);
-      bottom:-120px;
     }
   }
