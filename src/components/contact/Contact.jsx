@@ -85,8 +85,8 @@ const Contact = () => {
     {
       icon: <FontAwesomeIcon icon={faPhone} />,
       title: "Phone",
-      value: "+1 (512)960-5108",
-      link: "tel:+15129605108",
+      value: "+1 (512)783-8823",
+      link: "tel:+15127838823",
     },
     {
       icon: <FontAwesomeIcon icon={faMapMarkerAlt} />,
