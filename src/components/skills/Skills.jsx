@@ -26,11 +26,11 @@ const techSkills = [
   { icon: faGithub, label: "GitHub" },
   { icon: faFigma, label: "Figma" },
   { icon: faProjectDiagram, label: "GraphQL" },
-  { icon: "assets/images/typescript.svg", label: "TypeScript", isImage: true },
-  { icon: "assets/images/nextjs.svg", label: "Next.js", isImage: true },
-  { icon: "assets/images/webpack.svg", label: "Webpack", isImage: true },
-  { icon: "assets/images/firebase.svg", label: "Firebase", isImage: true },
-  { icon: "assets/images/postman.svg", label: "Postman", isImage: true },
+  { icon: "/assets/images/typescript.svg", label: "TypeScript", isImage: true },
+  { icon: "/assets/images/nextjs.svg", label: "Next.js", isImage: true },
+  { icon: "/assets/images/webpack.svg", label: "Webpack", isImage: true },
+  { icon: "/assets/images/firebase.svg", label: "Firebase", isImage: true },
+  { icon: "/assets/images/postman.svg", label: "Postman", isImage: true },
 ];
 
 const otherSkills = [
@@ -180,10 +180,11 @@ const Skills = () => {
                 title={label}
               >
                 {isImage ? (
-                  <img src={`/{icon}`} alt={label} width={30} height={30} />
+                  <img src={icon} alt={label} width={30} height={30} />
                 ) : (
                   <FontAwesomeIcon icon={icon} size="2x" />
                 )}
+
               </div>
             ))}
           </div>
